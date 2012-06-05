@@ -1,6 +1,6 @@
 %define name	gtk-gnutella
-%define version	0.97
-%define release	%mkrel 1
+%define version	0.98.3
+%define release	1
 %define summary	Gnutella GTK client
 
 Name: 		%{name}
@@ -9,13 +9,12 @@ Release: 	%{release}
 Summary: 	%{summary}
 License: 	GPLv2
 Group: 		Networking/File transfer
-Source: 	%{name}-%{version}.tar.bz2
+Source0: 	http://downloads.sourceforge.net/project/gtk-gnutella/gtk-gnutella/%{version}/%{name}-%{version}.tar.bz2
 Source1:	%{name}-remote-shell.txt.bz2
 Source10:	%{name}.16.png
 Source11:	%{name}.32.png
 Source12:	%{name}.48.png
 URL: 		http://gtk-gnutella.sourceforge.net
-Buildroot: 	%{_tmppath}/%{name}-buildroot
 Buildrequires:	gtk+2-devel
 Buildrequires:	libxml2-devel
 BuildRequires:	gnutls-devel
