@@ -76,3 +76,14 @@ rm -rf %{buildroot}
 %{_liconsdir}/%{name}.png
 %{_datadir}/applications/gtk-gnutella.desktop
 
+
+
+%changelog
+* Tue Jun 05 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.98.3-1
++ Revision: 802705
+- version update 0.98.3
+
+* Fri Aug 12 2011 Andrey Bondrov <abondrov@mandriva.org> 0.97-1
++ Revision: 694190
+- imported package gtk-gnutella
+
