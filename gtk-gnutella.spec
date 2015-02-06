@@ -1,6 +1,6 @@
 %define name	gtk-gnutella
 %define version	0.98.3
-%define release	1
+%define release	2
 %define summary	Gnutella GTK client
 
 Name: 		%{name}
