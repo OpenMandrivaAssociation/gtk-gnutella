@@ -11,7 +11,7 @@ BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(libglade-2.0)
 Buildrequires:	libxml2-devel
 BuildRequires:	gnutls-devel
-BuildRequires:	glib2-devel
+BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	dbus-devel
 BuildRequires:	zlib-devel
 Buildrequires:	bison
