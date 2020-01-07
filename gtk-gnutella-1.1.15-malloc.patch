@@ -1,0 +1,28 @@
+diff -Nrbu gtk-gnutella-1.1.15/src/lib/xmalloc.c gtk-gnutella-1.1.15-OK/src/lib/xmalloc.c
+--- gtk-gnutella-1.1.15/src/lib/xmalloc.c	2019-07-14 18:05:18.000000000 +0300
++++ gtk-gnutella-1.1.15-OK/src/lib/xmalloc.c	2020-01-03 19:59:32.640212756 +0300
+@@ -8804,6 +8804,24 @@
+ }
+ 
+ /*
++ * This is a GNU extension.
++ *
++ * This function is not used by gtk-gnutella but needs to be provided when
++ * we remap malloc() because some libc routines may rely on it.  When malloc()
++ * is redefined, it is critical that this usage be trapped here since our block
++ * architecture is specific.
++ * 		--RAM, 2019-11-10
++ *
++ * @return the number of usable bytes in the block of allocated memory
++ * pointed to by `p'.  If `p' is NULL, 0 is returned.
++ */
++size_t
++malloc_usable_size(void *p)
++{
++		return xallocated(p);
++}
++
++/*
+  * For recent MinGW startup, we need to remap strdup() as well to make sure
+  * it calls our malloc().  If we let it resolve by Microsoft's C runtime, it
+  * will call their malloc(), and we don't want that anyway.
