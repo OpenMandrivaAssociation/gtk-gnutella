@@ -30,6 +30,9 @@ gnutella network features.
 %autopatch -p1
 
 %build
+export CC=gcc
+export CXX=g++
+
 ./Configure -O -Dprefix=%{_prefix} -Dbindir=%{_bindir} \
         -Dglibpth="/%{_lib} %{_libdir}" \
         -Dprivlib=%{_datadir}/%{name} -Dsysman=%{_mandir}/man1 \
