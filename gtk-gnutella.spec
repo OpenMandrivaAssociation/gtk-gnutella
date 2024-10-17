@@ -5,7 +5,7 @@ Summary: 	Gnutella GTK client
 License: 	GPLv2
 Group: 		Networking/File transfer
 Source0: 	http://sourceforge.net/projects/gtk-gnutella/files/gtk-gnutella-%{version}.tar.xz
-URL: 		http://gtk-gnutella.sourceforge.net
+URL: 		https://gtk-gnutella.sourceforge.net
 Patch0:         gtk-gnutella-1.1.15-malloc.patch
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(libglade-2.0)
